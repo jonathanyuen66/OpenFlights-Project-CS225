@@ -1,0 +1,94 @@
+CS 225 Final Project Progress Log
+
+Week of April 12:
+
+4/13:
+Graphs file (Djikstra’s algorithm, landmark path, DFS function, edgeFind)
+Revised Project Proposal
+Delegated the following tasks:
+PageRank: (Due by 4/19) Kevin
+Djikstras: (Due by 4/26) Ryan & Jon
+Landmark: (Due by 5/3) Jack (& Jon if help is needed)
+Graphic Output
+Next meeting : 4/14 19:00 to work on Vertex.cpp, vertex.h
+
+4/14:
+Worked on establishing how to parse OpenFlights data as a CSV (Entire Team)
+
+4/20:
+Created Airports Class - Jon & Ryan
+Created Makefile using cs225.mk as template and added cs225 HSLAPixel and PNG classes - Jon & Ryan
+Modified main.c to show the functionality of Airports Class get functions - Jon & Ryan
+Still need to figure out how to convert string to doubles (stod is temperamental) - Jon & Ryan
+Next: will work on establishing graphs class with Airports as the vertices and the distance between the airports as weighted edges - Jon & Ryan
+
+4/21:
+Created PageRank Class
+Modified main.c to test the functionality of pagerank with random data -Kevin
+Improved the Airport class. Added a constructor that takes a line from airport.dat. -Jack
+Fixed string to double issue. -Jack
+Cleaned up main.c and wrote code to test airport class. -Jack
+
+4/22:
+Added functinos to calculate distances between airports given their airport ID's. -Jack
+
+4/24:
+Added unordered_map to Airport class to record adjacent airports(vertices) and flights(edges). -Jack
+Added function to parse and add edges. Added function to add all edges. -Jack
+(Above changes are not tested)
+
+4/26:
+added a rough draft of a function which is supposed to populate PageRank's adj matrix -Kevin
+Modified pagerank's makeA to accommodate -Kevin
+Modified pagerank to normalize result vector -Kevin
+
+4/27:
+Added getter functions in graph class and airport class -Jack
+cleaned up and implemented necessary function for graph class -Jack
+Tested graph class with small datasets with repetitive flights successfully -Group
+ready to move on to other algorithms:
+PageRank: Kevin
+Djikstras: Ryan & Jon
+Landmark: Jack
+BFS: Group
+
+4/28:
+Cleaned and added comments to all existing classes. -Jack
+Moved the unordered_map in airport class to public since it is easier to modify it -Kevin
+
+5/3:
+update on pagerank's adj matrix generator -Kevin
+
+5/4:
+Updated graph constructor such that the invalid flights are disregarded. -Jack
+That includes missing information (using \N) and irregular formatting (has more or less than 8 commas).
+Implemented basic idea of BFS and Djikstras. Still needs compiling and testing. -Jack
+Pagerank tested. -Kevin
+clean up main and pagerank class. Main's Interface setup initially. Comment and function interface added -Kevin
+
+5/5:
+Completed Djikstra's Algorithm - Jon & Ryan
+    - Currently takes a graph, starting airport(string), and destination airport (string)
+    - Added test cases in the main function. Still need to work on getting input from terminal (cin)
+    - Will work on creating outline of Landmark Path. - Jon & Ryan 
+
+5/5:
+fixed pagerank to eliminate runtime issue -Kevin
+
+5/7:
+Fixed graph construction - Jack
+    - no more empty elements when inserting an edge that contains uninserted airport
+    - no more inserting default constructed airport when airport information is invalid
+Fixed various BFS functions: now generating path correctly - Jack
+Added 2 Landmark operations - Jack
+Will clean up main.c and test cases later - Jack
+
+5/9:
+Modified Makefile for testcases - Jack
+Added test cases
+    - Added unit test for pagerank class's function - Kevin
+    - Converted testcases from main.cpp to test.cpp - Jack & Kevin
+fixed a type convertion bug - Kevin
+Modified Landmark to output 0 distance when airport not found - Jack
+Finished main.cpp interface - Jack & Kevin
+
